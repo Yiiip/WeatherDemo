@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lyp.myweatherdemo.MainActivity"
+    android:background="@drawable/gradient_color" >
+
+    <TextView 
+        android:id="@+id/tv_currentCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:text="城市"
+        android:gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+    
+    <TextView 
+        android:id="@+id/tv_currentTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="65sp"
+        android:text="00℃"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_currentCity" />
+    
+    <TextView 
+        android:id="@+id/cuttingLine"
+        android:layout_width="0.5dp"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:textSize="16sp"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_currentTemp" />
+    
+    <TextView
+        android:id="@+id/tv_weather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:text="天气 风力"
+        android:gravity="right"
+        android:layout_marginRight="3dp"
+        android:layout_below="@+id/tv_currentTemp"
+        android:layout_toLeftOf="@+id/cuttingLine" />
+    
+    <TextView
+        android:id="@+id/tv_pm25"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:text="PM2.5"
+        android:gravity="left"
+        android:layout_marginLeft="3dp"
+        android:layout_below="@+id/tv_currentTemp"
+        android:layout_toRightOf="@+id/cuttingLine" />
+    
+    <ScrollView 
+        android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/tv_date4"
+	    android:layout_above="@+id/bt_urlConn"
+	    android:background="#22ffffff"
+	    android:layout_marginTop="25dp"
+	    android:scrollbars="none">
+        <TextView
+	        android:id="@+id/tv_show"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:textColor="#ffffff"
+	        android:textSize="10sp"
+	        android:hint="json"
+	        android:textColorHint="#f0f0f0" />
+    </ScrollView>
+    
+    <TextView
+        android:id="@+id/tv_date1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:text="今       天        天气        温度"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/cuttingLine" />
+    
+    <TextView
+        android:id="@+id/tv_date2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:text="明       天        天气        温度"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/tv_date1" />
+    
+    <TextView
+        android:id="@+id/tv_date3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:text="xx月xx日        天气        温度"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/tv_date2" />
+    
+    <TextView
+        android:id="@+id/tv_date4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+        android:text="xx月xx日        天气        温度"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/tv_date3" />
+    
+    <Button
+        android:id="@+id/bt_urlConn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#44ffffff"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:text="更新天气 - 百度天气API"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+    
+</RelativeLayout>
