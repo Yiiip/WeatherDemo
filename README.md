@@ -218,11 +218,7 @@ public class MainActivity extends Activity {
 由于安卓不能在子线程中对UI进行更新操作，所以通过new Message()创建一个消息对象，
 设置它的obj为之前的Weather实体，利用Handler的sendMessage方法把实体传到主线程中。
 
-<<<<<<< HEAD
 其余代码如下:
-
-=======
->>>>>>> origin/master
 
 ```bash
 	private void initData() {
